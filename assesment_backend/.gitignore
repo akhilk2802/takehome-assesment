@@ -1,13 +1,4 @@
 env/
-
-*.log
-*.pot
-*.pyc
-*.pyo
-*.pyd
 __pycache__/
-*.cover
-*.mo
-*.so
 *.db
 *.sqlite3
