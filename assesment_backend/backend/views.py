@@ -5,14 +5,15 @@ import logging
 from rest_framework.decorators import api_view # decorator for API_VIEW
 from rest_framework.response import Response 
 from rest_framework import status
+from django.conf import settings
 
 from .serializers import CompanySerializer, LocationSerializer
 
 logger = logging.getLogger(__name__) # Logger Setup, saves all the logs to debug.log
 
 def readCSV(file_name): # Method to read CSV file with filename, returns the data
-    base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    csv_path = os.path.join(base_dir, file_name)
+    csv_path = os.path.join(settings.BASE_DIR, "data" ,file_name)
+    # print("CSV :", csv_path)
     try:
         with open(csv_path, 'r') as f:
             reader = csv.DictReader(f)

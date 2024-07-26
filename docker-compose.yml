@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  backend:
+    build:
+      context: ./assesment_backend
+      dockerfile: Dockerfile
+    container_name: assesment_backend_service
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./assesment_backend:/backend_service
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+
+  frontend:
+    build:
+      context: ./assesment_frontend
+      dockerfile: Dockerfile
+    container_name: assesment_frontend_service
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
