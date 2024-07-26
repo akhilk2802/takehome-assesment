@@ -67,7 +67,7 @@ Ensure you have the following installed on your system:
 - You can access the frontend by navigating to `http://localhost` in your web browser
 - You can access the backend server by navigating to `http://localhost:8000` in postman or using curl
 
-## How the applications looks
+## How the application looks
 
 - Company List page
   ![company list](./images/companyList.jpg)
