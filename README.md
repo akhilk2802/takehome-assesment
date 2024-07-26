@@ -16,7 +16,7 @@
 ## Technologies Used
 
 - **Backend**: Django REST Framework (Python)
-- **Frontend**: React (JavaScript)
+- **Frontend**: React (JavaScript), SCSS, React-Bootstrap
 - **Containerization**: Docker, Docker Compose
 - **Web Server**: Nginx (for serving React app)
 

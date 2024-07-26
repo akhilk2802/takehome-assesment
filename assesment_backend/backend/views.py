@@ -36,7 +36,7 @@ def get_company_detail(request, company_id): # Method to fetch details of specif
     
     companies_data = readCSV("companies.csv")
     if companies_data is None:
-        return Response({"error":"Error reading the data from the given path"}, status = status.HTTP_500)
+        return Response({"error":"Error reading the data from the given path"}, status = status.HTTP_500_INTERNAL_SERVER_ERRORx)
 
     company = next((c for c in companies_data if int(c['company_id']) == company_id), None)
     if company is None:

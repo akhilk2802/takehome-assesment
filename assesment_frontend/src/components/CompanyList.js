@@ -17,19 +17,22 @@ import {
 } from "react-bootstrap";
 
 const CompanyList = () => {
-  const [companies, setCompanies] = useState([]);
-  const [search, setSearch] = useState("");
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [companies, setCompanies] = useState([]); // State to store the list of companies
+  const [search, setSearch] = useState(""); // State to store the search input
+  const [loading, setLoading] = useState(true); // State to manage loading state
+  const [error, setError] = useState(null); // Stores error messages
 
-  const companiesURL = "http://127.0.0.1:8000/companies/";
+  const companiesURL = "http://127.0.0.1:8000/companies/"; // API Endpoint to fetch the list of companies
 
+  // useEffect hook to fetch companies data when the component mounts
   useEffect(() => {
     const fetchCompanies = async () => {
       try {
+        // Fetch companies data from the API
         const response = await axios.get(companiesURL);
         const data = response.data;
 
+        // Check if the data is an array and set it to state
         if (Array.isArray(data)) {
           setCompanies(data);
         } else {
@@ -37,8 +40,10 @@ const CompanyList = () => {
         }
       } catch (error) {
         console.error("Error fetching data: ", error);
+        // Set error message in case of a failure
         setError("Failed to fetch companies. Please try again.");
       } finally {
+        // Set loading state to false after the data is fetched or an error occurs
         setLoading(false);
       }
     };
@@ -46,6 +51,7 @@ const CompanyList = () => {
     fetchCompanies();
   }, []);
 
+  // Filter companies based on the search input
   const filteredCompanies = companies.filter((company) =>
     company.name.toLowerCase().includes(search.toLowerCase())
   );
