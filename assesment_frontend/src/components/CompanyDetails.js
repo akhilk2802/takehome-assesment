@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import DistanceChart from "./DistanceChart";
 import axios from "axios";
 import "../styles/css/CompanyDetails.css";
 import {
@@ -10,6 +11,9 @@ import {
   Tab,
   Alert,
   Spinner,
+  Row,
+  CardGroup,
+  Col,
 } from "react-bootstrap"; // react-bootstrap
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"; // leaflet
 import "leaflet/dist/leaflet.css";
@@ -126,15 +130,25 @@ const CompanyDetails = () => {
         <Button as={Link} to="/" variant="secondary" className="mb-3">
           Back to List
         </Button>
-        {/* Only render if there is a company selected  */}
-        {company && (
-          <Card className="mb-3">
-            <Card.Body>
-              <Card.Title>{company.name}</Card.Title>
-              <Card.Text>{company.address}</Card.Text>
-            </Card.Body>
-          </Card>
-        )}
+        <Row>
+          <CardGroup>
+            {company && (
+              <Card className="mb-4">
+                <Card.Body>
+                  <Card.Title>{company.name}</Card.Title>
+                  <Card.Text>{company.address}</Card.Text>
+                </Card.Body>
+              </Card>
+            )}
+
+            <Card className="mb-4">
+              <Card.Body>
+                <Card.Title>Distance Between Locations</Card.Title>
+                <DistanceChart locations={locations} />
+              </Card.Body>
+            </Card>
+          </CardGroup>
+        </Row>
         {/* Only Render if there are other locations */}
         {locations.length > 0 && (
           // using a tab UI

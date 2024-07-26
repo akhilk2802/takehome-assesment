@@ -11,6 +11,7 @@
   - [Backend (Django REST Framework)](#1-backend-django-rest-framework)
   - [Frontend (React App)](#2-frontend-react-app)
   - [Build and start with Docker](#3-build-and-start-with-docker)
+- [Swagger Documentation](#swagger-documenation)
 - [How the applications looks](#how-the-applications-looks)
 
 ## Technologies Used
@@ -67,10 +68,15 @@ Ensure you have the following installed on your system:
 - You can access the frontend by navigating to `http://localhost` in your web browser
 - You can access the backend server by navigating to `http://localhost:8000` in postman or using curl
 
+## Swagger Documenation
+
+- Swagger documentation is available at `http://localhost:8000/swagger/`
+
 ## How the application looks
 
 - Company List page
   ![company list](./images/companyList.jpg)
 
 - Company Details page
-  ![company Details](./images//companyDetails.jpg)
+  ![company Details](./images//companyDetails1.jpg)
+  ![company Details](./images//companyDetails2.jpg)
