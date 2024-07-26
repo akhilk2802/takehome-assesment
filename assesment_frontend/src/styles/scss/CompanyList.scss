@@ -1,12 +1,38 @@
 .company-list {
   padding: 10px;
+  margin: 10px;
 }
 
 .company-list-heading {
-  padding: 10px;
+  padding-top: 40px;
 
   h1 {
     font-weight: bold;
     font-size: 40px;
+  }
+}
+
+.company-list-body {
+  padding-top: 40px;
+
+  .section-divider {
+    border: 0;
+    height: 1px;
+    background-color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .card-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .company-card {
+    transition: box-shadow 0.3s ease;
+  }
+
+  .company-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
   }
 }

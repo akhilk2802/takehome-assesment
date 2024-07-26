@@ -1,12 +1,17 @@
 .company-details {
   padding: 10px;
+  margin: 10px;
 }
 
 .company-details-heading {
-  padding: 10px;
+  padding-top: 40px;
 
   h1 {
     font-weight: bold;
     font-size: 40px;
   }
+}
+
+.company-details-body {
+  padding-top: 40px;
 }
