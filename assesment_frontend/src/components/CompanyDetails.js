@@ -105,7 +105,11 @@ const CompanyDetails = () => {
 
   if (loading) {
     // If there is delay in fetching data from companies endpoint, if renders a different page or content
-    return <Container>Loading...</Container>;
+    return (
+      <Container>
+        <Spinner animation="border" role="status" />
+      </Container>
+    );
   }
 
   if (error) {
