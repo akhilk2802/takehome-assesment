@@ -103,7 +103,7 @@ const CompanyList = () => {
             ))}
           </Row>
         ) : (
-          <Alert variant="info">No companies found.</Alert>
+          <Alert variant="info">No such companies found. try other name</Alert>
         )}
       </Container>
     </Container>

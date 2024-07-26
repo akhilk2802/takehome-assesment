@@ -110,12 +110,7 @@ const CompanyDetails = () => {
         <h1>Company Details</h1>
       </Container>
       <Container className="company-details-body">
-        <Button
-          as={Link}
-          to="/companyList"
-          variant="secondary"
-          className="mb-3"
-        >
+        <Button as={Link} to="/" variant="secondary" className="mb-3">
           Back to List
         </Button>
         {company && (
