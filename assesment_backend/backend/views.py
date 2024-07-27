@@ -33,6 +33,7 @@ def readCSV(file_name): # Method to read CSV file with filename, returns the dat
 @api_view(['GET'])
 def get_all_companies(request): # Method to fetch details of all the companies
     companies_data = readCSV("companies.csv")
+    # print(companies_data)
     if companies_data is None:
         return Response({"error":"Error reading the data from the given path"}, status = status.HTTP_500_INTERNAL_SERVER_ERROR)
     if not companies_data:

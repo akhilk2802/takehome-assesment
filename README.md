@@ -11,7 +11,8 @@
   - [Backend (Django REST Framework)](#1-backend-django-rest-framework)
   - [Frontend (React App)](#2-frontend-react-app)
   - [Build and start with Docker](#3-build-and-start-with-docker)
-  - [Run tests for react app](#4-run-tests-for-react-app)
+  - [Run tests for client](#4-run-tests-for-react-app)
+  - [Run tests for server](#5-run-tests-for-django-backend-app)
 - [Swagger Documentation](#swagger-documenation)
 - [How the applications looks](#how-the-applications-looks)
 
@@ -74,6 +75,12 @@ Ensure you have the following installed on your system:
 - Navigate to frontend directory.
   `cd assesment_frontend`
 - Run tests by running `npm test`
+
+### 5. Run Tests for Django (Backend) App
+
+- Navigate to backend directory.
+  `cd assesment_backend`
+- Run tests by running `python manage.py test`
 
 ## Swagger Documenation
 
