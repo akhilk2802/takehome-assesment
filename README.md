@@ -14,7 +14,7 @@
   - [Run tests for client](#4-run-tests-for-react-app)
   - [Run tests for server](#5-run-tests-for-django-backend-app)
 - [Swagger Documentation](#swagger-documenation)
-- [How the applications looks](#how-the-applications-looks)
+- [How the applications looks](#how-the-application-looks)
 
 ## Technologies Used
 

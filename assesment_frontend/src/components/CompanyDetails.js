@@ -83,7 +83,7 @@ const CompanyDetails = () => {
           setError(`Error: ${err.response.status} - ${err.response.data}`);
         } else if (err.request) {
           // If the request was made but no response was received, likely a network error
-          setError("Error: Network error. Please try again later.");
+          setError("Error: Network error. Please try again.");
         } else {
           // For any other errors (e.g., issues with the request setup)
           setError(`Error: ${err.message}`);
