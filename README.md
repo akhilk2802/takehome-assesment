@@ -11,6 +11,7 @@
   - [Backend (Django REST Framework)](#1-backend-django-rest-framework)
   - [Frontend (React App)](#2-frontend-react-app)
   - [Build and start with Docker](#3-build-and-start-with-docker)
+  - [Run tests for react app](#4-run-tests-for-react-app)
 - [Swagger Documentation](#swagger-documenation)
 - [How the applications looks](#how-the-applications-looks)
 
@@ -67,6 +68,12 @@ Ensure you have the following installed on your system:
 - The server will be available at `http://localhost:8000` and the frontend at `http://localhost`
 - You can access the frontend by navigating to `http://localhost` in your web browser
 - You can access the backend server by navigating to `http://localhost:8000` in postman or using curl
+
+### 4. Run Tests for React App
+
+- Navigate to frontend directory.
+  `cd assesment_frontend`
+- Run tests by running `npm test`
 
 ## Swagger Documenation
 

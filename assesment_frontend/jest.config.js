@@ -2,7 +2,8 @@ module.exports = {
   setupFilesAfterEnv: ["<rootDir>/src/setupTests.js"],
   testEnvironment: "jsdom",
   transform: {
-    "^.+\\.jsx?$": "babel-jest",
+    "^.+\\.(js|jsx)$": "babel-jest",
   },
   moduleFileExtensions: ["js", "jsx"],
+  transformIgnorePatterns: ["node_modules/(?!(react-leaflet-custom-control)/)"],
 };
